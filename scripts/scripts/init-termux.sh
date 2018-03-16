@@ -1,14 +1,15 @@
 #!/data/data/com.termux/files/usr/bin/sh
 pkg upgrade
-pkg install curl ledger man mosh mpv mutt newsboat openssh python stow termux-api tmux vim youtube-dl zsh
+pkg install curl ledger man mosh mpv mutt newsboat openssh python stow termux-api tmux vim zsh
 
-pip install khal speedtest
+pip install khal speedtest-cli youtube-dl
 
 #SHELL
 chsh
 
 #TERMUX
 termux-setup-storage
+sleep 5
 mv storage .storage
 
 #DOTFILES
