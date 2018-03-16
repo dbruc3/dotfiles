@@ -10,7 +10,7 @@ chsh
 #TERMUX
 termux-setup-storage
 sleep 5
-mv storage .storage
+mv ~/.storage ~/.storage
 
 #DOTFILES
 cd ~/.dotfiles
