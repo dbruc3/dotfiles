@@ -2,7 +2,7 @@
 pkg upgrade
 pkg install curl ledger man mosh mpv mutt newsboat openssh python stow termux-api tmux vim zsh
 
-pip install khal speedtest-cli youtube-dl
+pip install khal speedtest-cli youtube-dl mps-youtube
 
 #SHELL
 chsh
