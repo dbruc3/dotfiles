@@ -21,3 +21,8 @@ ssh-keygen
 #cp .ssh/id_rsa.pub .storage/downloads/id_rsa.pub
 #read 'Send .storage/downloads/id_rsa.pub to nuc via email (Enter to continue)'
 
+#Git
+cd ~/.dotfiles
+git remote remove origin
+git remote add origin git@github.com:dbruc3/dotfiles.git
+cp ~/.storage/downloads/id_rsa* ~/.ssh/
