@@ -9,9 +9,9 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 #MISCELLANEOUS
-alias weather='~/scripts/weather.py'
-alias forecast='~/scripts/forecast.py'
-alias whereami='~/scripts/whereami.py'
+alias weather='~/.scripts/weather.py'
+alias forecast='~/.scripts/forecast.py'
+alias whereami='~/.scripts/whereami.py'
 
 #DEV
 alias pip='pip3'
