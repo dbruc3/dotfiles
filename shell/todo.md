@@ -1,0 +1,15 @@
+ - configure khal
+ - configure mutt
+ - configure news+reader
+ - configure mpv
+ - tmux BT headset
+ - selfie script
+ - tmux battery color bar
+ - pass (with termux-dialog??)
+ - tmux updates with termux-info
+ - termux-location script
+ - configure external viewers with termux-open
+ - configure external sharers with termux-open
+ - call phone number script
+ - wifi scanning script
+ - tmux ssid
