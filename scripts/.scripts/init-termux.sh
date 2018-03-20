@@ -29,6 +29,11 @@ ssh-keygen
 echo "Host nuc" > ~/.ssh/config
 echo "\tHostName $server" >> ~/.ssh/config
 echo "\tUser dan" >> ~/.ssh/config
+echo "Host pi" > ~/.ssh/config
+echo "\tHostName $server" >> ~/.ssh/config
+echo "\tPort $ssh_port_alt" >> ~/.ssh/config
+echo "\tUser dan" >> ~/.ssh/config
+ssh-copyid pi
 
 #GIT
 cd ~/.dotfiles

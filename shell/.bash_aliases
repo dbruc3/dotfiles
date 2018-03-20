@@ -17,6 +17,23 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 #SOCIAL
+khalbin=`which khal`
+alias month="$khalbin"
+ikhal()
+{
+	$khalbin interactive
+	pushd ~/.config/khal/calendar
+	changes=`git add * && git commit -a -m auto-commit && git push`
+	if [ -z "$changes" ]
+	then
+		if [ ! -f ~/.config/khal/.header ]
+		then
+			rm ~/.config/khal/.header
+			~/.config/khal/header.sh
+		fi
+	fi
+}
+alias khal='khal list now 7 days'
 abook()
 {
 	if [ ! -f ~/.abook/addressbook ]

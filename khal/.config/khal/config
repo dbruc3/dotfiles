@@ -25,11 +25,11 @@ default_calendar = private
 highlight_event_days = True
 print_new = event
 
-[local]
+[locale]
 dateformat = %m/%d/%Y
 datetimeformat = %m/%d/%Y %H:%M
 firstweekday = 6
-longdateformat - %m/%d/%Y
+longdateformat = %m/%d/%Y
 longdatetimeformat = %m/%d/%Y %H:%M
 timeformat = %H:%M
 
