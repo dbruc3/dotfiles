@@ -7,8 +7,8 @@ read ssh_port_alt
 pkg upgrade -y
 pkg install -y bash-completion curl elinks ledger man mosh mpv mutt newsboat openssh python stow rsync termux* tmux vim zsh
 
-pip install --upgrade pip -y
-pip3 install -y khal speedtest-cli youtube-dl mps-youtube geocoder ipgetter python-forecastio termcolor
+pip install --upgrade pip
+pip3 install khal speedtest-cli youtube-dl mps-youtube geocoder ipgetter python-forecastio termcolor
 
 #SHELL
 chsh

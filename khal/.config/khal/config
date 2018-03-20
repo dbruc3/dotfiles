@@ -1,0 +1,37 @@
+[calendars]
+
+[[private]]
+path = ~/.config/khal/calendar
+type = calendar
+color = dark green
+
+#[[birthdays]]
+#path = ~/.abook/contacts
+#type = birthdays
+#color = light magenta
+
+[[steelers]]
+path = ~/.config/khal/steelers
+type = calendar
+color = brown
+
+[[holidays]]
+path = ~/.config/khal/holidays
+type = calendar
+color = light blue
+
+[default]
+default_calendar = private
+highlight_event_days = True
+print_new = event
+
+[local]
+dateformat = %m/%d/%Y
+datetimeformat = %m/%d/%Y %H:%M
+firstweekday = 6
+longdateformat - %m/%d/%Y
+longdatetimeformat = %m/%d/%Y %H:%M
+timeformat = %H:%M
+
+[view]
+frame = color
