@@ -42,3 +42,22 @@ git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/contacts.git ~/.abook/con
 #echo 'KEYBASE'
 #go get github.com/keybase/client/go/keybase
 #go install -tags production github.com/keybase/client/go/keybase
+
+#TODO
+echo ' - configure khal' >> ~/todo.md
+echo ' - configure mutt' >> ~/todo.md
+echo ' - configure news+reader' >> ~/todo.md
+echo ' - configure mpv' >> ~/todo.md
+echo ' - tmux BT headset' >> ~/todo.md
+echo ' - selfie script' >> ~/todo.md
+echo ' - tmux battery color bar' >> ~/todo.md
+echo ' - pass (with termux-dialog??)' >> ~/todo.md
+echo ' - tmux updates with termux-info' >> ~/todo.md
+echo ' - termux-location script' >> ~/todo.md
+echo ' - configure external viewers with termux-open' >> ~/todo.md
+echo ' - configure external sharers with termux-open' >> ~/todo.md
+echo ' - call phone number script' >> ~/todo.md
+echo ' - wifi scanning script' >> ~/todo.md
+echo ' - tmux ssid' >> ~/todo.md
+
+
