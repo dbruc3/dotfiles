@@ -5,6 +5,7 @@ alias pip='pip3'
 alias weather='~/.scripts/weather.py'
 alias forecast='~/.scripts/forecast.py'
 alias whereami='~/.scripts/whereami.py'
+alias wifi='~/.scripts/wifi-scan.py'
 
 #NAVIGATION
 alias vm='vim'

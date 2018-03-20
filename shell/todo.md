@@ -11,5 +11,4 @@
  - configure external viewers with termux-open
  - configure external sharers with termux-open
  - call phone number script
- - wifi scanning script
  - tmux ssid
