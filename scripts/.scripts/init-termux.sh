@@ -39,6 +39,9 @@ cp ~/.storage/downloads/id_rsa* ~/.ssh/
 #ABOOK
 git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/contacts.git ~/.abook/contacts
 
+#KHAL
+git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/calendar.git ~/.config/khal/calendar
+
 #broken
 #echo 'KEYBASE'
 #go get github.com/keybase/client/go/keybase
