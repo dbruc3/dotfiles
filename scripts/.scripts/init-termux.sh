@@ -1,6 +1,11 @@
 #!/usr/bin/sh
+echo "Enter IP address for server:"
+read server
+echo "Alternative SSH port:"
+read ssh_port_alt
+
 pkg upgrade
-pkg install curl elinks ledger man mosh mpv mutt newsboat openssh python stow termux-api tmux vim zsh
+pkg install curl elinks ledger man mosh mpv mutt newsboat openssh python stow rsync termux-api tmux vim zsh
 
 pip3 install khal speedtest-cli youtube-dl mps-youtube geocoder ipgetter python-forecastio termcolor
 
@@ -10,7 +15,7 @@ chsh
 #TERMUX
 termux-setup-storage
 sleep 5
-mv ~/.storage ~/.storage
+mv ~/storage ~/.storage
 
 #DOTFILES
 cd ~/.dotfiles
@@ -20,6 +25,9 @@ stow *
 ssh-keygen
 #cp .ssh/id_rsa.pub .storage/downloads/id_rsa.pub
 #read 'Send .storage/downloads/id_rsa.pub to nuc via email (Enter to continue)'
+echo "Host nuc" > ~/.ssh/config
+echo "\tHostName $server" >> ~/.ssh/config
+echo "\tUser dan" >> ~/.ssh/config
 
 #GIT
 cd ~/.dotfiles
@@ -27,6 +35,10 @@ git remote remove origin
 git remote add origin git@github.com:dbruc3/dotfiles.git
 cp ~/.storage/downloads/id_rsa* ~/.ssh/
 
-echo 'KEYBASE'
-go get github.com/keybase/client/go/keybase
-go install -tags production github.com/keybase/client/go/keybase
+#ABOOK
+git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/contacts.git ~/.abook/contacts
+
+#broken
+#echo 'KEYBASE'
+#go get github.com/keybase/client/go/keybase
+#go install -tags production github.com/keybase/client/go/keybase

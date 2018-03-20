@@ -16,6 +16,17 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+#SOCIAL
+abook()
+{
+	if [ ! -f ~/.abook/addressbook ]
+	then
+		~/.abook/vcf2abook.py ~/.abook/contacts ~/.abook/addressbook
+	fi
+	abook --datafile=~/.abook/addressbook
+	~/.abook/abook2vcf.py ~/.abook/addressbook ~/.abook/contacts
+}
+
 #WEB
 ddg()
 {
