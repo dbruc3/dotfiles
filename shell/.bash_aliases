@@ -6,6 +6,12 @@ alias weather='~/.scripts/weather.py'
 alias forecast='~/.scripts/forecast.py'
 alias whereami='~/.scripts/whereami.py'
 alias wifi='~/.scripts/wifi-scan.py'
+selfie()
+{
+	termux-camera-photo -c 1 ~/selfie.jpeg
+	termux-open ~/selfie.jpeg
+}
+
 
 #NAVIGATION
 alias vm='vim'

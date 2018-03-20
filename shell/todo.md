@@ -2,7 +2,6 @@
  - configure mutt
  - configure news+reader
  - configure mpv
- - selfie script
  - pass (with termux-dialog??)
  - tmux updates with termux-info
  - termux-location script
