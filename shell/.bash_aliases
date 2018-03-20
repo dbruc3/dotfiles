@@ -16,6 +16,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias mv='mv -i'
 
 #SOCIAL
 khalbin=`which khal`
