@@ -25,6 +25,17 @@ alias .....='cd ../../../..'
 alias mv='mv -i'
 
 #SOCIAL
+phone()
+{
+	number=`termux-clipboard-get`
+	if [ ! -z "$1" ]
+	then
+		number=$1
+	else
+		echo "Calling $number"
+	fi
+	termux-telephony-call $number
+}
 khalbin=`which khal`
 alias month="$khalbin"
 ikhal()

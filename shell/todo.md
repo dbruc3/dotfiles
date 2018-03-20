@@ -7,4 +7,3 @@
  - termux-location script
  - configure external viewers with termux-open
  - configure external sharers with termux-open
- - call phone number script
