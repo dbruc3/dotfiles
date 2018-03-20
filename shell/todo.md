@@ -3,7 +3,6 @@
  - configure news+reader
  - configure mpv
  - pass (with termux-dialog??)
- - tmux updates with termux-info
  - termux-location script
  - configure external viewers with termux-open
  - configure external sharers with termux-open

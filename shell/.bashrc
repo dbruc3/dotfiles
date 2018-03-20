@@ -12,7 +12,17 @@ export TZ=$(getprop persist.sys.timezone)
 
 if [ ! -n "$SSH_CONNECTION" ]
 then
-	tmux &>> ~/.log && exit
+	if ! tmux info &> /dev/null
+	then
+		echo "Checking for updates..."
+		updates=`~/.tmux/updates.py`
+		if [ ! -z $updates ]
+		then
+			pkg upgrade
+		fi
+		termux-clipboard-set ""
+		tmux &>> ~/.log && exit
+	fi
 fi
 clear
 if [ ! -f ~/.config/khal/.header ]
