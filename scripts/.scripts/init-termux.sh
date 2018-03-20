@@ -4,7 +4,7 @@ read server
 echo "Alternative SSH port:"
 read ssh_port_alt
 
-pkg upgrade -y
+#pkg upgrade -y
 pkg install -y bash-completion curl elinks ledger man mosh mpv mutt newsboat openssh python stow rsync termux* tmux vim zsh
 
 pip install --upgrade pip
