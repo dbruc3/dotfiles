@@ -6,6 +6,16 @@ alias weather='~/.scripts/weather.py'
 alias forecast='~/.scripts/forecast.py'
 alias whereami='~/.scripts/whereami.py'
 alias wifi='~/.scripts/wifi-scan.py'
+directions()
+{
+	url=$(~/.scripts/google-map.py --dir $*)
+	termux-open $url
+}
+map()
+{
+	url=$(~/.scripts/google-map.py $*)
+	termux-open $url
+}
 selfie()
 {
 	termux-camera-photo -c 1 ~/selfie.jpeg
@@ -72,7 +82,12 @@ bang()
 {
 	ddg !$*
 }
-alias wiki='bang w'
+#alias wiki='bang w'
+wiki()
+{
+	url=$(~/.scripts/wikipedia-search.py $*)
+	termux-open $url
+}
 bangs()
 {
 	curl -sL https://ddg.gg/bang_lite.html | grep "$1" | grep "<br>" | sed "s/<br>//g"

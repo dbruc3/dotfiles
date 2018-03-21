@@ -3,4 +3,6 @@ scripts/.scripts/__pycache__/
 abook/.abook/contacts/
 khal/.config/khal/.header
 khal/.config/khal/calendar
+elinks/.elinks/cookies
+elinks/.elinks/globhist
 .log
