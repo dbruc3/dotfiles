@@ -4,5 +4,5 @@ cd ~/.dotfiles
 changes=`git status -s`
 if [ ! -z "$changes" ]
 then
-	printf " \u270D"
+	printf " \u0394"
 fi
