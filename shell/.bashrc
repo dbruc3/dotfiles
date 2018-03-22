@@ -9,24 +9,25 @@ export GOPATH="$HOME/.go"
 export PATH="$PATH:$GOPATH/bin"
 
 export TZ=$(getprop persist.sys.timezone)
-
 if [ ! -n "$SSH_CONNECTION" ]
 then
 	if ! tmux info &> /dev/null
 	then
+		touch .first
 		~/.scripts/updates.py > ~/.scripts/.updates &
 		tmux &>> ~/.log && exit
 	fi
 fi
-
-clear
+if [ -f ~/.first ]
+then
+	neofetch
+	rm ~/.first
+fi
 
 if [ ! -z `cat ~/.scripts/.updates` ]
 then
 	pkg upgrade
 fi
-
-clear
 
 if [ ! -f ~/.config/khal/.header ]
 then

@@ -1,8 +1,8 @@
 #! /bin/bash
 
 cd ~/.dotfiles
-changes=`git status -s`
+changes=`git status -s | wc -l`
 if [ ! -z "$changes" ]
 then
-	printf " \u0394"
+	printf " $changes\u0394"
 fi
