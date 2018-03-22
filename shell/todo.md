@@ -3,6 +3,6 @@
  - configure news+reader
  - configure mpv
  - pass (with termux-dialog??)
- - termux-location script
  - configure external viewers with termux-open
+	- youtube
  - configure external sharers with termux-open

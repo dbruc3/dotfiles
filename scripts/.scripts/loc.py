@@ -1,12 +1,14 @@
 #! /usr/bin/env python
 import geocoder
 from subprocess import getoutput
-import ipgetter
 
 def getLoc():
-    ip = getoutput("echo $SSH_CONNECTION | cut -d' ' -f1")
-    if ip is None:
-        ip = getoutput('curl -s ipecho.net/plain')
-    if ip.startswith('192'):
+    yoga = getoutput('termux-location -p network -r last')
+    if 'not found' in yoga:
+        import ipgetter
         ip = ipgetter.myip()
-    return geocoder.ip(ip)
+        return geocoder.ip(ip)
+    else:
+        import json
+        data = json.loads(yoga)
+        return geocoder.osm([data['latitude'], data['longitude']], method='reverse')

@@ -5,8 +5,8 @@ lo = loc.getLoc()
 
 if not lo.ok:
     quit()
-
-if lo.country == 'US':
+us = ['US', 'United States', 'United States of America']
+if lo.country in us:
     region = lo.state
 else:
     region = lo.country

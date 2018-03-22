@@ -1,6 +1,12 @@
 #! /usr/bin/env python
 import sys, loc
 
+url = 'https://www.google.com/maps'
+
+if len(sys.argv) == 1:
+    print(url)
+    quit()
+
 action = 'search'
 dest = sys.argv[1:]
 locc = ''
