@@ -6,3 +6,4 @@
  - configure external viewers with termux-open
 	- youtube
  - configure external sharers with termux-open
+ - single video player app (ala mpv) for android
