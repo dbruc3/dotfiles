@@ -44,7 +44,8 @@ phone()
 	else
 		echo "Calling $number"
 	fi
-	termux-telephony-call $number
+	#termux-telephony-call $number
+	termux-open tel:$number
 }
 khalbin=`which khal`
 alias month="$khalbin"
