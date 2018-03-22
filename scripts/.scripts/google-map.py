@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-import sys, loc
+import sys, loc, re
 
 url = 'https://www.google.com/maps'
 
@@ -18,4 +18,7 @@ if sys.argv[1] == '--dir':
     locc = '{},{}/'.format(location.lat, location.lng)
 
 dest = '+'.join(dest)
-print('https://www.google.com/maps/{}/{}{}'.format(action, locc, dest))
+if re.search('[a-zA-Z]', dest) is not None:
+    print('https://www.google.com/maps/{}/{}{}'.format(action, locc, dest))
+else:
+    print('geo:{}'.format(dest.replace('+','')))
