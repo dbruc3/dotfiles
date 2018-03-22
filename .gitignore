@@ -5,4 +5,5 @@ khal/.config/khal/.header
 khal/.config/khal/calendar
 elinks/.elinks/cookies
 elinks/.elinks/globhist
+elinks/.elinks/gotohist
 .log
