@@ -1,4 +1,4 @@
- - configure khal
+ - configure khal 
  - configure mutt
  - configure news+reader
  - configure mpv
