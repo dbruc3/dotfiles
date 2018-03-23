@@ -1,3 +1,4 @@
+ - configure abook
  - configure khal 
  - configure mutt
  - configure news+reader
