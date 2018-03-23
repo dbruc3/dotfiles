@@ -4,6 +4,8 @@ clear
 #PS1="\w: "
 PS1='$(gbt $?)'
 export GBT_CARS='Status, Dir, Git, Sign'
+export GBT_CAR_DIR_BG='black'
+
 export TERM='xterm-256color'
 export TMP="~/.tmp"
 eval "$(ssh-agent -s)" # &>> $TMP/.log
