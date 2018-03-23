@@ -5,6 +5,7 @@ clear
 PS1='$(gbt $?)'
 export GBT_CARS='Status, Git, Dir, Sign'
 export GBT_CAR_DIR_BG='black'
+export GBT_CAR_GIT_FORMAT=' {{ Icon }} {{ Status }}{{ Ahead }}{{ Behind }} '
 
 export TERM='xterm-256color'
 export TMP="~/.tmp"
