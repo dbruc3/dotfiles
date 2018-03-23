@@ -1,7 +1,10 @@
 clear
 . ~/.bash_aliases
 #PROMPT="%~: "
-PS1="\w: "
+#PS1="\w: "
+PS1='$(gbt $?)'
+export GBT_CARS='Status, Dir, Git, Sign'
+export TERM='xterm-256color'
 export TMP="~/.tmp"
 eval "$(ssh-agent -s)" # &>> $TMP/.log
 ssh-add ~/.ssh/id_rsa #&>> $TMP/.log
