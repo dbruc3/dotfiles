@@ -1,5 +1,5 @@
  - configure abook
- - configure khal 
+ - configure khal
  - configure mutt
  - configure news+reader
  - configure mpv
@@ -8,3 +8,5 @@
 	- youtube
  - configure external sharers with termux-open
  - single video player app (ala mpv) for android
+
+ Interesting packages: blogc, cadaver, ccrypt, daemonize, db/redis, debootstrap, direvent, gbt, icecast, mathomatic, memcached

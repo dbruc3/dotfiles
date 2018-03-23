@@ -1,6 +1,7 @@
 #DEV
 alias pip='pip3'
-alias flud='termux-open'
+alias share='termux-share -a send -d'
+alias hub='git'
 
 #MISCELLANEOUS
 alias weather='~/.scripts/weather.py'
