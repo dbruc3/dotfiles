@@ -26,6 +26,8 @@ fi
 if [ -f ~/.first ]
 then
 	neofetch
+	~/.scripts/wifi-scan.py
+	echo
 	rm ~/.first
 fi
 
