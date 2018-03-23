@@ -5,7 +5,7 @@ echo "Alternative SSH port:"
 read ssh_port_alt
 
 pkg upgrade -y
-pkg install -y bash-completion curl elinks gtypist hub hunspell ledger man mosh mpv mutt neofetch newsboat mathomatic ncdu openssh python stow rsync termux* tmux transmission vim units weechat
+pkg install -y bash-completion curl elinks gnupg2 gtypist hub hunspell ledger man mosh mpv mutt neofetch newsboat mathomatic ncdu openssh pass python stow rsync termux* tmux transmission vim units weechat
 
 pip install --upgrade pip
 pip3 install khal speedtest-cli youtube-dl geocoder ipgetter python-forecastio termcolor
@@ -46,6 +46,13 @@ git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/contacts.git ~/.abook/con
 
 #KHAL
 git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/calendar.git ~/.config/khal/calendar
+
+#PASS
+git clone ssh://dan@$server:$ssh_port_alt/home/dan/git/pass.git ~/.password-store
+scp -r dan@$server:~/.gnupg/keys ~/keys
+gpg2 --import ~/keys/pass.pub.key
+gpg2 --import ~/keys/pass.key
+rm -rf ~/keys
 
 #broken
 #echo 'KEYBASE'

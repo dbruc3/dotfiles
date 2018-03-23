@@ -1,12 +1,8 @@
- - configure abook
- - configure khal
- - configure mutt
- - configure news+reader
- - configure mpv
- - pass (with termux-dialog??)
- - configure external viewers with termux-open
-	- youtube
- - configure external sharers with termux-open
- - single video player app (ala mpv) for android
+ - configure abook:			old version doesn't support vcard
+ - configure khal:			broken python os package
+ - configure mutt:			pass first
+ - configure news+reader:	broken dependency
+ - configure mpv:			no ytdl support?
+ - configure pass:
 
  Interesting packages: blogc, cadaver, ccrypt, daemonize, db/redis, debootstrap, direvent, icecast, memcached

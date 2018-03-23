@@ -2,6 +2,7 @@
 alias pip='pip3'
 alias share='termux-share -a send -d'
 alias hub='git'
+alias gpg='gpg2'
 
 #MISCELLANEOUS
 alias weather='~/.scripts/weather.py'
