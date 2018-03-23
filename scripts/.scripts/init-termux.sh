@@ -5,13 +5,13 @@ echo "Alternative SSH port:"
 read ssh_port_alt
 
 pkg upgrade -y
-pkg install -y bash-completion curl elinks ledger man mosh mpv mutt newsboat openssh python stow rsync termux* tmux vim zsh
+pkg install -y bash-completion curl elinks ledger man mosh mpv mutt neofetch newsboat openssh python stow rsync termux* tmux vim zsh
 
 pip install --upgrade pip
 pip3 install khal speedtest-cli youtube-dl geocoder ipgetter python-forecastio termcolor
 
 #SHELL
-chsh
+#chsh
 
 #TERMUX
 termux-setup-storage
