@@ -13,6 +13,8 @@ pip3 install khal speedtest-cli youtube-dl geocoder ipgetter python-forecastio t
 #SHELL
 chsh
 
+mkdir ~/.tmp
+
 #TERMUX
 termux-setup-storage
 sleep 5

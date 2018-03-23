@@ -8,20 +8,17 @@ alias whereami='~/.scripts/whereami.py'
 alias wifi='~/.scripts/wifi-scan.py'
 directions()
 {
-	url=$(~/.scripts/google-map.py --dir $*)
-	termux-open $url
+	termux-open `~/.scripts/google-map.py --dir $*`
 }
 map()
 {
-	url=$(~/.scripts/google-map.py $*)
-	termux-open $url
+	termux-open `~/.scripts/google-map.py $*`
 }
 selfie()
 {
 	termux-camera-photo -c 1 ~/selfie.jpeg
 	termux-open ~/selfie.jpeg
 }
-
 
 #NAVIGATION
 alias vm='vim'

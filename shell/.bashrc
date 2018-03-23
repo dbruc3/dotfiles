@@ -2,8 +2,9 @@ clear
 . ~/.bash_aliases
 #PROMPT="%~: "
 PS1="\w: "
-eval "$(ssh-agent -s)" &>> .log
-ssh-add ~/.ssh/id_rsa &>> .log
+export TMP="~/.tmp"
+eval "$(ssh-agent -s)" &>> $TMP/.log
+ssh-add ~/.ssh/id_rsa &>> $TMP/.log
 
 export GOPATH="$HOME/.go"
 export PATH="$PATH:$GOPATH/bin"

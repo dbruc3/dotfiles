@@ -1,9 +1,3 @@
 scripts/.scripts/__pycache__/
 *.swp
 abook/.abook/contacts/
-khal/.config/khal/.header
-khal/.config/khal/calendar
-elinks/.elinks/cookies
-elinks/.elinks/globhist
-elinks/.elinks/gotohist
-.log
