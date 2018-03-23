@@ -1,5 +1,6 @@
 #DEV
 alias pip='pip3'
+alias flud='termux-open'
 
 #MISCELLANEOUS
 alias weather='~/.scripts/weather.py'
