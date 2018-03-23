@@ -14,25 +14,23 @@ then
 	if ! tmux info &> /dev/null
 	then
 		touch .first
-		~/.scripts/updates.py > ~/.scripts/.updates &
+		up=`apt list --upgradable | grep upgradable | wc -l`
+		if [[ $up > 0 ]]
+		then
+			pkg upgrade
+		fi
 		tmux &>> ~/.log && exit
 	fi
 fi
+
 if [ -f ~/.first ]
 then
 	neofetch
 	rm ~/.first
 fi
 
-if [ ! -z `cat ~/.scripts/.updates` ]
+agenda="~/.config/khal/.header"
+if [ -f $agenda ]
 then
-	pkg upgrade
+	cat $agenda
 fi
-
-if [ ! -f ~/.config/khal/.header ]
-then
-	~/.config/khal/header.sh
-else
-	cat ~/.config/khal/.header
-fi
-
