@@ -1,3 +1,4 @@
 scripts/.scripts/__pycache__/
 *.swp
 abook/.abook/contacts/
+khal/.config/khal/calendar/

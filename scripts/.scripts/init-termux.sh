@@ -39,6 +39,7 @@ ssh-copyid pi
 cd ~/.dotfiles
 git remote remove origin
 git remote add origin git@github.com:dbruc3/dotfiles.git
+git push --set-upstream origin master
 cp ~/.storage/downloads/id_rsa* ~/.ssh/
 
 #ABOOK
