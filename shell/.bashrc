@@ -3,8 +3,9 @@ clear
 #PROMPT="%~: "
 PS1="\w: "
 export TMP="~/.tmp"
-eval "$(ssh-agent -s)" &>> $TMP/.log
-ssh-add ~/.ssh/id_rsa &>> $TMP/.log
+eval "$(ssh-agent -s)" # &>> $TMP/.log
+ssh-add ~/.ssh/id_rsa #&>> $TMP/.log
+clear
 
 export GOPATH="$HOME/.go"
 export PATH="$PATH:$GOPATH/bin"
