@@ -9,4 +9,4 @@
  - configure external sharers with termux-open
  - single video player app (ala mpv) for android
 
- Interesting packages: blogc, cadaver, ccrypt, daemonize, db/redis, debootstrap, direvent, gbt, icecast, memcached
+ Interesting packages: blogc, cadaver, ccrypt, daemonize, db/redis, debootstrap, direvent, icecast, memcached

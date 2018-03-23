@@ -3,7 +3,7 @@ clear
 #PROMPT="%~: "
 #PS1="\w: "
 PS1='$(gbt $?)'
-export GBT_CARS='Status, Dir, Git, Sign'
+export GBT_CARS='Status, Git, Dir, Sign'
 export GBT_CAR_DIR_BG='black'
 
 export TERM='xterm-256color'
