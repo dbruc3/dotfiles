@@ -10,6 +10,7 @@ set incsearch
 set hlsearch
 set noshowmode
 set laststatus=2
+let netrw_browsex_viewer="$BROWSER"
 
 syntax on
 

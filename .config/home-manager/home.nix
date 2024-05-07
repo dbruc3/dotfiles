@@ -42,17 +42,37 @@
   home.homeDirectory = "/home/dan";
 
   home.packages = [
+    pkgs.curl
     pkgs.protonvpn-gui
     pkgs.telegram-desktop
+    pkgs.tree
+    pkgs.yt-dlp-light
     # # It is sometimes useful to fine-tune packages, for example:
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
+    # SEARCH
+    (pkgs.writeShellScriptBin "ddg" ''
+      $BROWSER "https://ddg.gg/?q=$*"
+    '')
+    (pkgs.writeShellScriptBin "bang" ''
+      ddg !$*
+    '')
+    (pkgs.writeShellScriptBin "bangs" ''
+      curl -sL https://ddg.gg/bang_lite.html | grep "$1" | grep "<br>" | sed "s/<br>//g"
+    '')
+    (pkgs.writeShellScriptBin "pkgs" ''
+      ddg !nixpkgs "$*"
+    '')
+
+    # AUDIO
+    (pkgs.writeShellScriptBin "play" ''
+      yt-dlp -q -f 140 "ytsearch1:$*" -o - | mpv --speed=0.9 -
+    '')
+    (pkgs.writeShellScriptBin "playlist" ''
+      yt-dlp -q -f 140 "ytsearch31:$*" -o - | mpv --speed=0.9 -
+    '')
+
+    # WRITE
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -76,13 +96,18 @@
   };
 
   programs.bash.enable = true;
+  programs.bash.sessionVariables = {
+    BROWSER = "firefox";
+  };
   programs.bash.shellAliases = {
     hms = "nix-channel --update && nix-shell -p home-manager --run 'home-manager switch'";
     hm = "vim ~/.config/home-manager/home.nix && hms";
     dit = "git --git-dir=$HOME/.cfg --work-tree=$HOME";
+    ls = "ls --color=auto";
     la = "ls -a";
     mv = "mv -i";
     cp = "cp -i";
+    ts = "tree -a -I .git -I node_modules";
     gs = "git status";
     gd = "git diff";
     ".." = "cd ..";
@@ -103,6 +128,7 @@
     };
   };
   programs.home-manager.enable = true;
+  programs.mpv.enable = true;
   programs.password-store.enable = true;
   programs.tmux.enable = true;
   programs.vim.enable = true;
