@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   dconf.settings = {
@@ -38,13 +38,19 @@
     };
   };
 
+  home.activation = {
+    dotFilesConfig = lib.hm.dag.entryAfter ["installPackages"] ''
+      run ${pkgs.git}/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME config --local status.showUntrackedFiles no
+    '';
+  };
+
   home.username = "dan";
-  home.homeDirectory = "/home/dan";
+  home.homeDirectory = "/Users/dan";
 
   home.packages = [
     pkgs.curl
-    pkgs.protonvpn-gui
-    pkgs.telegram-desktop
+    #pkgs.protonvpn-gui
+    #pkgs.telegram-desktop
     pkgs.tree
     pkgs.yt-dlp-light
     # # It is sometimes useful to fine-tune packages, for example:
@@ -120,13 +126,13 @@
   };
 
   # TODO: set browser search engines and extensions
-  programs.chromium = {
-    enable = true;
-    commandLineArgs = [
-      "--no-sandbox"
-    ];
-  };
-  programs.firefox.enable = true;
+  #programs.chromium = {
+  #  enable = true;
+  #  commandLineArgs = [
+  #    "--no-sandbox"
+  #  ];
+  #};
+  # programs.firefox.enable = true;
   programs.git = {
     enable = true;
     userName = "dbruc3";
