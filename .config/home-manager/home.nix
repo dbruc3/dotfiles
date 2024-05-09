@@ -16,10 +16,10 @@
       show-battery-percentage = true;
     };
     "org/gnome/desktop/peripherals/touchpad" = {
-      natural-scroll = true;
+      natural-scroll = false;
     };
     "org/gnome/desktop/peripherals/mouse" = {
-      natural-scroll = true;
+      natural-scroll = false;
     };
     "org/gnome/desktop/privacy" = {
       hide-identity = true;
@@ -71,6 +71,9 @@
     (pkgs.writeShellScriptBin "playlist" ''
       yt-dlp -q -f 140 "ytsearch31:$*" -o - | mpv --speed=0.9 -
     '')
+    (pkgs.writeShellScriptBin "yt" ''
+      mpv -vo=x11 ytdl://ytsearch1:"$*"
+    '')
 
     # WRITE
   ];
@@ -117,7 +120,12 @@
   };
 
   # TODO: set browser search engines and extensions
-  programs.chromium.enable = true;
+  programs.chromium = {
+    enable = true;
+    commandLineArgs = [
+      "--no-sandbox"
+    ];
+  };
   programs.firefox.enable = true;
   programs.git = {
     enable = true;
